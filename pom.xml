@@ -6,7 +6,7 @@
     <groupId>com.connctd.tracing.stackdriver</groupId>
     <artifactId>stackdriver-opentracing</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>stackdriver-opentracing</name>
     <description>OpenTracing Tracer implementation for GCloud StackDriver</description>
     <url>https://github.com/connctd/stackdriver-opentracing</url>
