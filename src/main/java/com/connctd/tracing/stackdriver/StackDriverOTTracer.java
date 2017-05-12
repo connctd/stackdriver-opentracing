@@ -45,9 +45,9 @@ public class StackDriverOTTracer implements Tracer {
 
     /**
      * Registers a propagator for given format
-     * @param format
-     * @param propagator
-     * @param <C>
+     * @param format Format the propagator is responsible for
+     * @param propagator Class that takes care of injection and extraction
+     * @param <C> FormatType
      */
     public <C> void registerPropagator(Format<C> format, DatatypePropagator propagator) {
         if (!propagators.containsKey(format)) {
@@ -57,7 +57,8 @@ public class StackDriverOTTracer implements Tracer {
 
     /**
      * Removes propagator for given format
-     * @param format
+     * @param format Format of propagator
+     * @param <C> FormatType
      */
     public <C> void deregisterPropagator(Format<C> format) {
         if (propagators.containsKey(format)) {

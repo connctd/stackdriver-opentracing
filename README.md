@@ -65,7 +65,7 @@ SpanContext extractedContext = tracer.extract(Format.Builtin.TEXT_MAP, new TextM
 Trace.getSpanContextHandler().attach(((StackDriverOTSpanContext)extractedContext).getUnderlyingSpanContext());
 
 // attached span will now be parent of following span
-Span myParentSpan = tracer.buildSpan("Hello world!").withStartTimestamp(Calendar.getInstance().getTimeInMillis()).start();
+Span myChildSpan = tracer.buildSpan("Hello world!").withStartTimestamp(Calendar.getInstance().getTimeInMillis()).start();
 ...
 ```
 

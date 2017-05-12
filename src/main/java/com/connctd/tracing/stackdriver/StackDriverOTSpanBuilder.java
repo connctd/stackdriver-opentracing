@@ -52,7 +52,7 @@ public class StackDriverOTSpanBuilder implements Tracer.SpanBuilder {
 
     /**
      * @param timestamp - ms since unix epoch
-     * @return
+     * @return SpanBuilder instance
      */
     @Override
     public Tracer.SpanBuilder withStartTimestamp(long timestamp) {
