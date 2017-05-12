@@ -73,3 +73,6 @@ Span myChildSpan = tracer.buildSpan("Hello world!").withStartTimestamp(Calendar.
 ```
 tracer.registerPropagator(yourFormat, yourPropagator);
 ```
+
+...where yourPropagator needs to implement DatatypePropagator
+
