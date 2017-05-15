@@ -14,7 +14,7 @@ OpenTracing Tracer implementation for GCloud StackDriver based on Java. **Cautio
 <dependency>
     <groupId>com.connctd.tracing.stackdriver</groupId>
     <artifactId>stackdriver-opentracing</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -76,3 +76,7 @@ tracer.registerPropagator(yourFormat, yourPropagator);
 
 ...where yourPropagator needs to implement DatatypePropagator
 
+## Deployment
+Changes within master branch will cause a build on travis. As a result a snapshot version will pop out on sonatypes snapshot repository (https://oss.sonatype.org/content/repositories/snapshots/com/connctd/tracing/stackdriver/stackdriver-opentracing/).
+
+If you do a release (tag), an artifact will be deployed on sonatypes release repository. The artifacts name will be the tag name. So, make sure it is a meaningful version number (x.y.z). The artifact will be later on pushed to maven central automatically.
